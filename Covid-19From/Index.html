@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/Style.css">
+    <link rel="icon" href="./res/Logo.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Covid-19</title>
+</head>
+<body>
+    <!---->
+    <header>
+        <div class="logo">
+           <img src="./res/Logo.png" alt="Logo" style="height:200px;">
+        </div>
+        <div class="text">
+            <h1>Diagnostic Covid-19 </h1><br>
+           <h3>Formulaire d’autoévaluation des symptômes de la COVID-19.
+            Le présent formulaire ne remplace pas une consultation médicale. Respectez toujours
+            les consignes que vous donne un professionnel de la santé.</h3>   
+    </div>
+    </header>
+    <main>
+      <form onsubmit="return test()">
+        <fieldset class="IP">
+            <legend>Informations Personelles</legend>
+            <input type="text" id="name" name="fname" placeholder="Votre Préom"><br>
+            <input type="text"  id="lname" name="lname" placeholder="Votre nom"><br>
+            <input type="text" id='age'placeholder="votre age"><br>
+            <input type="email" name="email" placeholder="Votre Email"> <br>
+           <input type="text" name="job" id="job" placeholder="Travail"><br>
+           <input type="text"id='adress' placeholder="Adress"><br>
+           <input type="text"id='pnum' placeholder="Num de Téléphone"><br>
+        </fieldset>
+        <fieldset>
+           <legend>Veuillez Répondre Aux Questions</legend>
+           <div class="MaladiesC">
+           <h3>Maladies chroniques :</h3><br>
+           <p>Avez-vous des maladies chroniques ?</p><br>
+           <input type="checkbox" id="ch" name="" value="">
+           <label for=""> Maladie cardiaque</label><br>
+           <input type="checkbox" id="ch" name="" value="">
+           <label for="Maladie Pulmonaire"> Maladie Pulmonaire</label><br>
+           <input type="checkbox" id="ch" name="" value="">
+           <label for="3">Diabète</label><br>
+           <input type="checkbox" id="ch" name="" value="">
+           <label for="">Troubles auto-immunitaire</label><br>
+        </div>
+           <br>
+           <h3>Les symptômes les plus communs</h3><br>
+           <h4>Fièvre :</h4><br>
+           <div>
+           <p>Est-ce que votre température corporelle a dépassée 38° ?</p><br>
+           <input type="radio" id="ch" name="temp">
+           <label for="temp">Oui</label><br>
+           <input type="radio" id="temp" name="temp">
+           <label for="temp">Non</label><br>
+           <br>
+           <h4>Fatigue :</h4><br>
+           <p>Est-ce que vous vous sentez plus ou moins fatigué récemment ?</p><br>
+           <input type="radio" id="ch" name="fat">
+           <label for="fat">Oui</label><br>
+           <input type="radio" id="fat" name="fat" >
+           <label for="fat">Non </label><br>
+           <br>
+           <h4>Toux :</h4><br>
+           <p>Avez-vous de la toux ? Quelle sorte ?</p><br>
+           <input type="radio" id="ch" name="toux" >
+           <label for="toux">Toux sèche</label><br>
+           <input type="radio" id="ch" name="toux" >
+           <label for="toux">Toux régulière</label><br>
+           <input type="radio" id="toux" name="toux" >
+           <label for="toux">Non</label><br>
+        </div>
+        <br>
+        <h3>Les symptômes Sévères</h3><br>
+           <p>Avez-vous eu des difficultés à respirer ou un essoufflement ?</p>
+        <div>
+            <input type="radio" id="ch" name="resp">
+            <label for="resp">Oui</label><br>
+            <input type="radio" id="resp" name="resp">
+            <label for="resp">Non</label><br>
+        </div>
+        <br>
+        <p>Avez-vous eu des douleurs ou pressions thoraciques ?</p>
+        <div>
+            <input type="radio" id="ch" name="press">
+            <label for="press">Oui</label><br>
+            <input type="radio" id="press" name="press">
+            <label for="press">Non</label><br>
+        </div>
+        <br>
+        <p>Avez-vous eu perte de la parole ou du mouvement ?</p>
+        <div>
+            <input type="radio" id="ch" name="pert">
+            <label for="pert">Oui</label><br>
+            <input type="radio" id="pert" name="pert">
+            <label for="pert">Non</label><br>
+        </div>
+        <br>
+        <h3>Les symptômes Sévères</h3><br>
+        <p>Avez-vous eu une perte du goût de l’odorat ?</p>
+        <div>
+            <input type="radio" id="ch" name="sen">
+            <label for="sen">Oui</label><br>
+            <input type="radio" id="sen" name="sen">
+            <label for="sen">Non</label><br>
+        </div>
+        <br>
+        <p>Avez-vous des maux de gorge ? </p>
+        <div>
+            <input type="radio" id="ch" name="maux">
+            <label for="maux">Oui</label><br>
+            <input type="radio" id="maux" name="maux">
+            <label for="maux">Non</label><br>
+        </div>
+        <br>
+        <p>Avez-vous des maux de tête ?</p>
+        <div>
+            <input type="radio" id="ch" name="tete">
+            <label for="tete">Oui</label><br>
+            <input type="radio" id="tete" name="tete">
+            <label for="tete">Non</label><br>
+        </div>
+        </fieldset>
+        <fieldset>
+           <legend>Information Additionnelle</legend>
+           <label for="textarea">Information Supplémentaire :</label><br>
+           <textarea name="supp" id="supp"  rows="4" cols="50"></textarea>
+        </fieldset>
+        <button type="submit" onclick="test2()">Envoyer</button>
+    </form>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
